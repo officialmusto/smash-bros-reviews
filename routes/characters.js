@@ -1,13 +1,17 @@
 import { Router } from 'express'
 import * as charactersCtrl from '../controllers/characters.js'
+import * as reviewsCtrl from  '../controllers/reviews.js'
 
 const router = Router()
 
-//localhost:3000/reviews
+//GET localhost:3000/reviews
 router.get('/', charactersCtrl.index)
 
-//localhost:3000/rev
+//GET localhost:3000/characters/reviews
 router.get('/reviews', charactersCtrl.show)
+
+//GET localhost:3000/characters/reviews/new
+router.get('/reviews/new', reviewsCtrl.new)
 
 
 export {

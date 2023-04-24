@@ -2,9 +2,16 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const replySchema = new Schema({
+  content: String,
+  reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
+}, {
+  timestamps: true
+})
 const reviewSchema = new Schema({
   content: String,
-  rating: {type: Number, min: 1, max: 5, default: 5}
+  reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
+  replies: [replySchema,]
 }, {
   timestamps: true
 })

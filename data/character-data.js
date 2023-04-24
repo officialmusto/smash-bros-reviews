@@ -1,0 +1,7 @@
+const characters = [
+
+]
+
+export {
+  characters
+}

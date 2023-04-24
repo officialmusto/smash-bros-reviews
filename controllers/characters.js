@@ -21,22 +21,8 @@ function show(req, res){
     title: 'Character Reviews.'
   })
 }
-function create(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
-  Review.create(req.body)
-  .then(review => {
-    res.redirect(`/characters/review/${review._id}`)
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/movies/new')
-  })
-}
 
 export {
   index,
   show,
-  create,
 }
