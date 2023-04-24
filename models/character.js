@@ -7,6 +7,7 @@ const reviewSchema = new Schema({
   content: String,
   startYear: Number,
   tier: String,
+  favChar: Boolean,
 }, {
   timestamps: true,
 })
