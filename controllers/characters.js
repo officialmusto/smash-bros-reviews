@@ -5,7 +5,7 @@ function index(req, res){
   Character.find({})
   .then(character => {
     console.log(character)
-    res.render('reviews/index', {
+    res.render('characters/index', {
       character,
       title: "Choose your Character."
     })
@@ -16,7 +16,13 @@ function index(req, res){
   })
 }
 
+function show(req, res){
+  res.render('reviews/show', {
+    title: 'Character Reviews.'
+  })
+}
 
 export {
   index,
+  show,
 }
