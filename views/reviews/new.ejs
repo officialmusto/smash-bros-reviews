@@ -5,32 +5,39 @@
 <main>
   <h1><%= title %></h1>
   <h2>Character's Name</h2>
+  <% if (user) { %>
   <form id="new-form" action="/reviews" method="POST">
-    <label for="title-input"></label>
-    <textarea name="title" id="title-input" rows="6" cols="50" placeholder="Write your review here..."></textarea>
+    <label for="title-input">
+      <textarea name="title" id="title-input" rows="6" cols="50" placeholder="Write your review here..."></textarea>
+    </label>
     <br>
     <br>
-    <label for="start-year-input" >Smash Player Since:</label>
-    <input type="number" name="startYear" id="start-year-input" min="1999" placeholder="enter start year">
+    <label for="start-year-input" >Smash Player Since:
+      <input type="number" name="startYear" id="start-year-input" min="1999" placeholder="enter start year">
+    </label>
     <br>
     <br>
-    <label for="tier-level-select">Tier Level:</label>
-    <select name="tier" id="tier-level-select">
-      <option value="S">S</option>
-      <option value="A">A</option>
-      <option value="B">B</option>
-      <option value="C">C</option>
-      <option value="D">D</option>
-      <option value="F">F</option>
-    </select>
+    <label for="tier-level-select">Tier Level
+      <select name="tier" id="tier-level-select">
+        <option value="S">S</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="F">F</option>
+      </select>
+    </label>
     <br>
     <br>
-    <label for="in-favorites-checkbox">Add to Favorites?</label>
-    <input type="checkbox" name="inFavorites" id="in-favorites-checkbox" unchecked>
+    <label for="in-favorites-checkbox">Add to Favorites?
+      <input type="checkbox" name="inFavorites" id="in-favorites-checkbox" unchecked>
+    </label>
     <br>
     <br>
     <button type="submit">Add Review</button>
+
   </form>
+  <% } %>
 </main>
 
 <%- include("../partials/footer") %>

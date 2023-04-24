@@ -1,8 +1,7 @@
 import { Character } from "../models/character.js"
-import { Review } from "../models/review.js"
 
 function newReview (req, res){
-  res.render('reviews/new.ejs', {
+  res.render('reviews/new', {
     title: 'Write a Review.'
   })
 }
@@ -17,7 +16,7 @@ function create(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/movies/new')
+    res.redirect('/reviews/new')
   })
 }
 

@@ -1,4 +1,4 @@
-import { Review } from "../models/review.js"
+
 import { Character } from '../models/character.js'
 
 function index(req, res){
