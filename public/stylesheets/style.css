@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 /* The Universal Selector */
@@ -12,8 +13,9 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #f6f6f6;
+  background-image: linear-gradient(to bottom, #4b5c8b, #2b3c5b);
+  min-height: 100%;
+  color: #de8fad;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -21,7 +23,7 @@ body {
 }
 
 nav {
-  background-color: #f6f6f6;
+  background-color: #213558;
   color: #1a1a1a;
   display: flex;
   align-items: center;
@@ -34,6 +36,14 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+a {
+  color: #de8fad;
+}
+
+#profile-picture {
+  border-radius: 18px;
 }
 
 .right {

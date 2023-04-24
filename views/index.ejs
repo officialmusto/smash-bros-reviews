@@ -5,12 +5,13 @@
   <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
-      <img
+      <img class="google" id="profile-picture"
         src="<%= user.profile.avatar %>"
         alt="<%= user.profile.name %> avatar"
       />
     </div>
   <% } %>
+  <a href="/reviews">Drop-Down List</a>
 </main>
 
 <%- include('./partials/footer') %>

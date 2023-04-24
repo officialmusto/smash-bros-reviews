@@ -2,15 +2,16 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const reviewSchema = new Schema({
+const characterSchema = new Schema({
+  name: String,
   content: String,
   avatar: String,
 }, {
   timestamps: true,
 })
 
-const Review = mongoose.model('Review', reviewSchema)
+const Character = mongoose.model('Character', characterSchema)
 
 export {
-  Review
+  Character
 }
