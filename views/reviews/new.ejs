@@ -4,11 +4,14 @@
 
 <main>
   <h1><%= title %></h1>
+  <h2>Character's Name</h2>
   <form id="new-form" action="/reviews" method="POST">
-    <label for="title-input">Name:</label>
-    <input type="text" name="title" id="title-input">
+    <label for="title-input"></label>
+    <textarea name="title" id="title-input" rows="4" cols="50" placeholder="Write your review here..."></textarea>
+    <br>
     <label for="release-year-input">Release Year:</label>
     <input type="text" name="releaseYear" id="release-year-input">
+    <br>
     <label for="mpaa-rating-select">MPAA Rating:</label>
     <select name="mpaaRating" id="mpaa-rating-select">
       <option value="G">G</option>
@@ -16,8 +19,10 @@
       <option value="PG-13">PG-13</option>
       <option value="R">R</option>
     </select>
+    <br>
     <label for="now-showing-checkbox">Now Showing:</label>
     <input type="checkbox" name="nowShowing" id="now-showing-checkbox" checked>
+    <br>
     <button type="submit">Add Movie</button>
   </form>
 </main>
