@@ -3,20 +3,27 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const replySchema = new Schema({
+  content: String,
+  reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
+})
+
 const reviewSchema = new Schema({
   avatar: String,
   content: String,
   startYear: Number,
   tier: String,
   favChar: Boolean,
-}, {
+  reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
+  reply: [replySchema],
+  }, {
   timestamps: true,
-})
+  })
 
 const characterSchema = new Schema({
   name: String,
-  reviews: [reviewSchema],
   avatar: String,
+  reviews: [reviewSchema],
 }, {
   timestamps: true,
 })

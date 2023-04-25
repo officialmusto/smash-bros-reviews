@@ -1,6 +1,7 @@
 
 import { Character } from '../models/character.js'
 import { characters } from '../data/character-data.js'
+Character.insertMany(characters)
 
 function index(req, res){
   Character.find({})
