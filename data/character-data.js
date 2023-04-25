@@ -9,6 +9,12 @@ const characters = [
     "startYear": "",
     "tier": "",
     "favChar": "",
+    "reply": [
+      {
+        "content": "",
+        "reviewer": "",
+      },
+    ],
     },
     ],
   }, {
@@ -21,6 +27,12 @@ const characters = [
     "startYear": "",
     "tier": "",
     "favChar": "",
+    "reply": [
+      {
+        "content": "",
+        "reviewer": "",
+      },
+    ],
     },
     ],
   },  {
@@ -33,6 +45,12 @@ const characters = [
     "startYear": "",
     "tier": "",
     "favChar": "",
+    "reply": [
+      {
+        "content": "",
+        "reviewer": "",
+      },
+    ],
     },
     ],
   }, {
@@ -45,6 +63,12 @@ const characters = [
     "startYear": "",
     "tier": "",
     "favChar": "",
+    "reply": [
+      {
+        "content": "",
+        "reviewer": "",
+      },
+    ],
     },
     ],
   },
