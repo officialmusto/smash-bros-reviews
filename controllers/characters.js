@@ -1,5 +1,6 @@
 
 import { Character } from '../models/character.js'
+import { characters } from '../data/character-data.js'
 
 function index(req, res){
   Character.find({})

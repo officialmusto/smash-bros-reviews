@@ -7,6 +7,8 @@ function newReview (req, res){
 }
 
 function create(req, res) {
+  console.log('hI')
+  console.log(req.body)
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }

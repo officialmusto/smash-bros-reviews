@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import * as charactersCtrl from '../controllers/characters.js'
 import * as reviewsCtrl from  '../controllers/reviews.js'
+import { isLoggedIn } from '../middleware/middleware.js'
 
 const router = Router()
 
@@ -14,8 +15,8 @@ router.get('/reviews', charactersCtrl.show)
 router.get('/reviews/new', reviewsCtrl.new)
 
 //POST REQUESTS 
-// POST localhost:3000/characters
-router.post('/', reviewsCtrl.create)
+// POST localhost:3000/characters/review
+router.post('/reviews', isLoggedIn, reviewsCtrl.create)
 
 
 export {
