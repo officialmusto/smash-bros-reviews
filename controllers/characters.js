@@ -3,10 +3,10 @@ import { Character } from '../models/character.js'
 
 function index(req, res){
   Character.find({})
-  .then(character => {
-    console.log(character)
+  .then(characters => {
+    console.log(characters)
     res.render('characters/index', {
-      character,
+      characters,
       title: "Choose your Character."
     })
   })

@@ -1,4 +1,10 @@
 const characters = [
+  {
+    "name": "Mario",
+    "avatar": "",
+    "reviews": []
+  },
+  
 
 ]
 

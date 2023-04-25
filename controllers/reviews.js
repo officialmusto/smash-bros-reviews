@@ -12,8 +12,7 @@ function create(req, res) {
   }
   Review.create(req.body)
   .then(review => {
-    res.redirect(`/characters/review/${review._id}`)
-  })
+    res.redirect('/characters/reviews')})
   .catch(err => {
     console.log(err)
     res.redirect('/reviews/new')
