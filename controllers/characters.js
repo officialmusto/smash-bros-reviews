@@ -1,6 +1,3 @@
-// if (!characters === undefined) {
-// Character.insertMany(characters)
-// }
 import { Character } from '../models/character.js'
 
 function index(req, res){
@@ -16,9 +13,6 @@ function index(req, res){
     res.redirect('/')
   })
 }
-
-
-
 export {
   index,
 }

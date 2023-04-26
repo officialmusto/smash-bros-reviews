@@ -1,9 +1,9 @@
 import { Character } from "../models/character.js"
 
+
 function index(req, res) {
 
   Character.findById(req.params.characterId)
-  .populate("name")
   .then(character => {
     console.log(character.name)
     console.log(character)
@@ -33,10 +33,20 @@ function show(req, res) {
     })
 }
 
-function newReview (req, res){
-  res.render('reviews/new', {
-    title: 'Write a Review.'
-  })
+function newReview(req, res) {
+  const characterId = req.params.characterId
+  Character.findById(characterId)
+    .then(character => {
+      res.render('reviews/new', {
+        character,
+        user: req.user,
+        title: 'Write a Review.',
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
 }
 
 function create(req, res) {
