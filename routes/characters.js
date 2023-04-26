@@ -10,7 +10,7 @@ router.get('/', charactersCtrl.index)
 
 
 //GET localhost:3000/characters/reviews/new
-router.get('/reviews/new', reviewsCtrl.new)
+router.get('/new', reviewsCtrl.new)
 
 
 export {

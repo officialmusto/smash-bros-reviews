@@ -11,7 +11,7 @@ router.get('/', reviewsCtrl.index)
 
 
 //GET localhost:3000/reviews/:characterId
-router.get('/reviews/:characterId', charactersCtrl.show)
+router.get('/:characterId', reviewsCtrl.show)
 
 //POST REQUESTS 
 // POST localhost:3000/characters/review
