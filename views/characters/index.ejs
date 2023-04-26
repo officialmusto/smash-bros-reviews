@@ -5,11 +5,9 @@
   <h1>Choose Your Character.</h1>
   <a href="/">Landing Page</a><br>
   <br>
-  
   <% characters.forEach(character => { %>
     <a href="/reviews/<%= character._id %>"><%= character.name %></a>
   <% }) %>
-  
 </main>
 
 <%- include('../partials/footer') %>

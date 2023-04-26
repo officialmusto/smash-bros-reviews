@@ -13,6 +13,10 @@ router.get('/', reviewsCtrl.index)
 //GET localhost:3000/reviews/:characterId
 router.get('/:characterId', reviewsCtrl.show)
 
+//GET localhost:3000/reviews/:characterId/new
+router.get('/:characterId/new', reviewsCtrl.new)
+
+
 //POST REQUESTS 
 // POST localhost:3000/characters/review
 router.post('/', isLoggedIn, reviewsCtrl.create)
