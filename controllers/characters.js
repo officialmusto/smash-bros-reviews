@@ -1,5 +1,7 @@
 
+if (!characters === undefined) {
 Character.insertMany(characters)
+}
 import { Character } from '../models/character.js'
 import { characters } from '../data/character-data.js'
 
