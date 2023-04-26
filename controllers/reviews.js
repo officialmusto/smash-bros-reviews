@@ -1,4 +1,9 @@
-import { Character } from "../models/character.js"
+
+function index(req, res) {
+  res.render('reviews/show', {
+    title: 'All Reviews'
+    })
+}
 
 function newReview (req, res){
   res.render('reviews/new', {
@@ -24,6 +29,7 @@ function create(req, res) {
 
 
 export {
+  index,
   create,
   newReview as new,
 }

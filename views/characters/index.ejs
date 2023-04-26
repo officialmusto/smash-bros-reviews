@@ -4,18 +4,21 @@
 <main>
   <h1>Drop-Down Menu On This Page.</h1>
   <a href="/">Landing Page</a><br>
-  <a href="/characters/reviews">Character Review Page</a>
   <br>
-  <form action="">
-    <select name="options" id="options">
+  <form action="/reviews" method="GET">
+    <select name="characterId">
       <option value="">Choose Your Character</option>
       <% characters.forEach(character => { %>
         <option value="<%= character._id %>"><%= character.name %></option>
-      <% }); %>
+      <% }) %>
     </select>
     <br>
     <button type="submit">Submit</button>
   </form>
+  
 </main>
 
 <%- include('../partials/footer') %>
+
+
+

@@ -1,13 +1,9 @@
 
-if (!characters === undefined) {
-Character.insertMany(characters)
-}
+// if (!characters === undefined) {
+// Character.insertMany(characters)
+// }
 import { Character } from '../models/character.js'
 import { characters } from '../data/character-data.js'
-
-characters.forEach(character => {
-  console.log(character.name)
-})
 
 function index(req, res){
   Character.find({})
@@ -24,18 +20,18 @@ function index(req, res){
 }
 
 function show(req, res) {
-  Character.findById(req.params.characterId)
-  .then(character => {
-    console.log(characters)
-    res.render('reviews/show', {
-      character,
-      title: "Characters"
+  const characterId = req.query.characterId
+  Character.findById(characterId)
+    .then(character => {
+      res.render('reviews/show', {
+        character,
+        title: "Characters"
+      })
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
 }
 
 export {
