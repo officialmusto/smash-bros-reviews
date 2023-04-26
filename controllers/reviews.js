@@ -19,12 +19,12 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  // const characterId = req.params.characterId.split("=")[1]
+  const characterId = req.params.characterId
   Character.findById(characterId)
     .then(character => {
       res.render('reviews/show', {
         character,
-        title: character
+        title: character.name
       })
     })
     .catch(err => {

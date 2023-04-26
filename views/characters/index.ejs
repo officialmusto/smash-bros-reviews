@@ -5,17 +5,17 @@
   <h1>Choose Your Character.</h1>
   <a href="/">Landing Page</a><br>
   <br>
-  <form action="/reviews" method="GET">
-    <select name="characterId">
-      <option value="">Choose Your Character</option>
-      <% characters.forEach(character => { %>
-        <option value="<%= character._id %>"><%= character.name %></option>
-      <% }) %>
-    </select>
-    <br>
-    <button type="submit">Submit</button>
-  </form>
+  
+  <% characters.forEach(character => { %>
+    <a href="/reviews/<%= character._id %>"><%= character.name %></a>
+  <% }) %>
   
 </main>
 
 <%- include('../partials/footer') %>
+
+
+
+
+
+
