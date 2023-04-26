@@ -1,7 +1,6 @@
 // import npm packages
 import 'dotenv/config.js'
 import express from 'express'
-import { characters } from './data/character-data.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import createError from 'http-errors'

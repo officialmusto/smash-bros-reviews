@@ -1,12 +1,15 @@
 
+Character.insertMany(characters)
 import { Character } from '../models/character.js'
 import { characters } from '../data/character-data.js'
-Character.insertMany(characters)
+
+characters.forEach(character => {
+  console.log(character.name)
+})
 
 function index(req, res){
   Character.find({})
   .then(characters => {
-    console.log(characters)
     res.render('characters/index', {
       characters,
       title: "Choose your Character."
@@ -18,9 +21,18 @@ function index(req, res){
   })
 }
 
-function show(req, res){
-  res.render('reviews/show', {
-    title: 'Character Reviews.'
+function show(req, res) {
+  Character.findById(req.params.characterId)
+  .then(character => {
+    console.log(characters)
+    res.render('reviews/show', {
+      character,
+      title: "Characters"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 
