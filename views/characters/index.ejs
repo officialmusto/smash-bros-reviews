@@ -6,27 +6,15 @@
   <a href="/">Landing Page</a><br>
   <a href="/characters/reviews">Character Review Page</a>
   <br>
-  <% characters.forEach(character => { %>
-    <p> <%= character.name %></p>
-  <% }) %>
-  <br>
   <form action="">
     <select name="options" id="options">
       <option value="">Choose Your Character</option>
-      <option value="">Character 1</option>
-      <option value="">Character 2</option>
-      <option value="">Character 3</option>
-      <option value="">Character 4</option>
-      <option value="">Character 5</option>
-      <option value="">Character 6</option>
-      <option value="">Character 7</option>
-      <option value="">Character 8</option>
-      <option value="">Character 9</option>
-      <option value="">Character 10</option>
-      <option value="">Character 11</option>
-      <option value="">Character 12</option>
-      <option value="">Character 13</option>
-      <option value="">Character 14</option><br>
+      <% characters.forEach(character => { %>
+        <option value="<%= character._id %>"><%= character.name %></option>
+      <% }); %>
+    </select>
+    <br>
+    <button type="submit">Submit</button>
   </form>
 </main>
 
