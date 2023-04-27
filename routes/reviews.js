@@ -15,12 +15,15 @@ router.get('/', reviewsCtrl.index)
 //GET localhost:3000/reviews/:characterId/new
 router.get('/:characterId/new', reviewsCtrl.new)
 
-
+router.get('/:characterId/:reviewId/edit', isLoggedIn, reviewsCtrl.editReview)
 
 
 //POST REQUESTS 
 // POST localhost:3000/reviews/characters/
 router.post('/:characterId', isLoggedIn, reviewsCtrl.create)
+
+//PUT 
+router.put('/:characterId/:reviewId', isLoggedIn, reviewsCtrl.update)
 
 export {
   router,

@@ -8,10 +8,12 @@
 
   <div>NAME: </div>
   <div><%= character.name %></div>
-  <div>REVIEWS: </div>
-  <div><%= character.reviews %></div>
   <div>REVIEWER: </div>
-  <div><%= character.reviews.reviewer %></div>
+  <div><% character.reviews.forEach(review => { %>
+    <a href="/reviews/<%= character._id %>/<%= review._id %>/edit">
+      <p> <%= review.content %> </p>
+    </a>
+  <% }) %></div>
 <br>
   <div>CREATE NEW REVIEW: </div>
   <a href="/reviews/<%= character._id %>/new">Create a New Review</a>
