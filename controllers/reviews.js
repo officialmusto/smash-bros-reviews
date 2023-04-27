@@ -16,7 +16,6 @@ function index(req, res) {
       res.redirect('/')
     })
 }
-
 function newReview(req, res) {
   Character.findById(req.params.characterId)
     .then(character => {
@@ -30,7 +29,6 @@ function newReview(req, res) {
       res.redirect('/')
     })
 }
-
 function create(req, res) {
   req.body.reviewer = req.user.profile._id
   req.body.favChar = !!req.body.favChar
@@ -48,7 +46,6 @@ function create(req, res) {
     res.redirect('/')
   })
 }
-
 function editReview(req, res) {
   Character.findById(req.params.characterId)
   .then(character => {
@@ -66,7 +63,6 @@ function editReview(req, res) {
     res.redirect('/')
   })
 }
-
 function update(req, res){
   req.body.favChar = !!req.body.favChar
   Character.findById(req.params.characterId)
@@ -82,7 +78,6 @@ function update(req, res){
     res.redirect('/')
   })
 }
-
 function deleteReview(req, res){
   Character.findById(req.params.characterId)
   .then(character => {
@@ -95,7 +90,6 @@ function deleteReview(req, res){
     res.redirect('/')
   })
 }
-
 export {
   index,
   create,

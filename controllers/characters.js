@@ -13,7 +13,6 @@ function index(req, res){
     res.redirect('/')
   })
 }
-
 function show(req, res) {
   const characterId = req.params.characterId
   Character.findById(characterId)
@@ -28,8 +27,6 @@ function show(req, res) {
       res.redirect('/')
     })
 }
-
-
 export {
   index,
   show,

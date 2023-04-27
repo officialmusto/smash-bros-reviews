@@ -3,12 +3,6 @@
 
 <main>
   <h1> <%= title %>'s Reviews.</h1>
-  <a href="/">Landing Page</a><br>
-  <br>
-
-  <div>NAME: </div>
-  <div><%= character.name %></div>
-
   <div><% character.reviews.forEach(review => { %>
     <a href="/reviews/<%= character._id %>/<%= review._id %>/edit">edit</a>
       <p> <%= review.content %> </p>
@@ -17,7 +11,6 @@
       </form>
   <% }) %></div>
 <br>
-  <div>CREATE NEW REVIEW: </div>
   <a href="/reviews/<%= character._id %>/new">Create a New Review</a>
   <br>
 </main>
