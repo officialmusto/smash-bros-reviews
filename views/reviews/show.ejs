@@ -4,13 +4,15 @@
 <main>
   <h1> <%= title %>'s Reviews.</h1>
   <div><% character.reviews.forEach(review => { %>
-    <a href="/reviews/<%= character._id %>/<%= review._id %>/edit">edit</a>
-      <p> <%= review.content %> </p>
+  <p> <%= review.content %> </p>
+    <% if (review.reviewer.equals(user?.profile._id)) { %>
+      <a href="/reviews/<%= character._id %>/<%= review._id %>/edit"><button>edit</button></a>
       <form action="/reviews/<%= character._id %>/<%= review._id %>?_method=DELETE" method="POST">
-      <button>X</button>
-      </form>
+        <button>X</button>
+        </form>
+  <% } %>
   <% }) %></div>
-<br>
+  <br>
   <a href="/reviews/<%= character._id %>/new">Create a New Review</a>
   <br>
 </main>

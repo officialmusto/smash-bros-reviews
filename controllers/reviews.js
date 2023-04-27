@@ -55,7 +55,7 @@ function editReview(req, res) {
     res.render('reviews/edit', {
       character,
       review,
-      title: "EDIT"
+      title: "Edit your Review."
     })
   })
   .catch(err => {
