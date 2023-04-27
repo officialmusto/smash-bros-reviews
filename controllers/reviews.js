@@ -1,4 +1,4 @@
-import { Character, Review } from "../models/character.js"
+import { Character} from "../models/character.js"
 
 
 function index(req, res) {
@@ -34,7 +34,6 @@ function newReview(req, res) {
 function create(req, res) {
   req.body.reviewer = req.user.profile._id
   req.body.favChar = !!req.body.favChar
-  console.log(req.body)
   Character.findById(req.params.characterId)
   .then(character => {
     character.reviews.push(req.body)
@@ -54,7 +53,7 @@ function editReview(req, res) {
   Character.findById(req.params.characterId)
   .then(character => {
     console.log(character.reviews)
-    let review = character.reviews.find( r => r._id.equals(req.params.reviewId))
+    let review = character.reviews.id(req.params.reviewId)
     console.log(review)
     res.render('reviews/edit', {
       character,
@@ -69,10 +68,31 @@ function editReview(req, res) {
 }
 
 function update(req, res){
-  console.log(req.params)
+  req.body.favChar = !!req.body.favChar
   Character.findById(req.params.characterId)
   .then(character => {
+    character.reviews = character.reviews.map(r => (
+      r.equals(req.params.reviewId) ? {...r, ...req.body} : r
+    ))
+    character.save()
+    res.redirect(`/characters/${req.params.characterId}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 
+function deleteReview(req, res){
+  Character.findById(req.params.characterId)
+  .then(character => {
+    character.reviews.id(req.params.reviewId).deleteOne()
+    character.save()
+    res.redirect(`/characters/${req.params.characterId}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 
@@ -80,6 +100,7 @@ export {
   index,
   create,
   newReview as new,
-  editReview,
-  update
+  editReview as edit,
+  update,
+  deleteReview as delete,
 }

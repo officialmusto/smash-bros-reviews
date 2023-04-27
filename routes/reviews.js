@@ -15,7 +15,7 @@ router.get('/', reviewsCtrl.index)
 //GET localhost:3000/reviews/:characterId/new
 router.get('/:characterId/new', reviewsCtrl.new)
 
-router.get('/:characterId/:reviewId/edit', isLoggedIn, reviewsCtrl.editReview)
+router.get('/:characterId/:reviewId/edit', isLoggedIn, reviewsCtrl.edit)
 
 
 //POST REQUESTS 
@@ -24,6 +24,9 @@ router.post('/:characterId', isLoggedIn, reviewsCtrl.create)
 
 //PUT 
 router.put('/:characterId/:reviewId', isLoggedIn, reviewsCtrl.update)
+
+//DELETE
+router.delete('/:characterId/:reviewId', isLoggedIn, reviewsCtrl.delete)
 
 export {
   router,
