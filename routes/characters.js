@@ -8,6 +8,8 @@ const router = Router()
 //GET localhost:3000/reviews
 router.get('/', charactersCtrl.index)
 
+//GET localhost:3000/reviews/:characterId
+router.get('/:characterId', charactersCtrl.show)
 
 //GET localhost:3000/characters/reviews/new
 router.get('/new', reviewsCtrl.new)

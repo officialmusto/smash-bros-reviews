@@ -5,6 +5,15 @@
   <h1> <%= title %>'s Reviews.</h1>
   <a href="/">Landing Page</a><br>
   <br>
+
+  <div>NAME: </div>
+  <div><%= character.name %></div>
+  <div>REVIEWS: </div>
+  <div><%= character.reviews %></div>
+  <div>REVIEWER: </div>
+  <div><%= character.reviews.reviewer %></div>
+<br>
+  <div>CREATE NEW REVIEW: </div>
   <a href="/reviews/<%= character._id %>/new">Create a New Review</a>
   <br>
 </main>

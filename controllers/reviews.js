@@ -1,30 +1,14 @@
-import { Character } from "../models/character.js"
+import { Character, Review } from "../models/character.js"
 
 
 function index(req, res) {
-
   Character.findById(req.params.characterId)
-  .then(character => {
-    console.log(character.name)
-    console.log(character)
-    res.render('reviews/show', {
-      character: character,
-      title: 'titles',
-    })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
-}
-
-function show(req, res) {
-  const characterId = req.params.characterId
-  Character.findById(characterId)
     .then(character => {
+      console.log(character.name)
+      console.log(character)
       res.render('reviews/show', {
-        character,
-        title: character.name
+        character: character,
+        title: 'titles',
       })
     })
     .catch(err => {
@@ -34,12 +18,10 @@ function show(req, res) {
 }
 
 function newReview(req, res) {
-  const characterId = req.params.characterId
-  Character.findById(characterId)
+  Character.findById(req.params.characterId)
     .then(character => {
       res.render('reviews/new', {
         character,
-        user: req.user,
         title: 'Write a Review.',
       })
     })
@@ -50,24 +32,17 @@ function newReview(req, res) {
 }
 
 function create(req, res) {
+  req.body.reviewer = req.user.profile._id
+  req.body.favChar = !!req.body.favChar
+  Character.create(req.body)
   console.log(req.body)
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
-  Review.create(req.body)
   .then(review => {
-    res.redirect('/characters/reviews')})
-  .catch(err => {
-    console.log(err)
-    res.redirect('/reviews/new')
+    res.render(`reviews/${req.params.character._id}`)
   })
 }
-
-
 
 export {
   index,
   create,
-  show,
   newReview as new,
 }

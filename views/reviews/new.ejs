@@ -5,10 +5,10 @@
 <main>
   <% if (user) { %>
     <h1><%= title %></h1>
-    <h2>Character's Name</h2>
-    <form id="new-form" action="/reviews" method="POST">
+    <h2> <%= character.name %></h2>
+    <form id="new-form" action="/reviews<%= character._id %>?_method=PUT" method="POST">
       <label>
-        <textarea name="content" id="title-input" rows="6" cols="50" placeholder="Write your review here..."></textarea>
+        <textarea name="content" id="title-input" rows="6" cols="50" placeholder="Write your review here..." ></textarea>
       </label>
       <br>
       <br>
@@ -34,9 +34,7 @@
       </label>
       <br>
       <br>
-      <a href="/reviews/<%= character._id %>/">
-        <button class="btn">Add Review!</button>
-      </a>
+        <button>Add Review!</button>
 
   </form>
   <% } else { %>
