@@ -23,6 +23,15 @@ body {
   font-family: 'Jost', sans-serif;
 }
 
+
+a {
+  text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+  text-decoration: underline; /* Show underline on hover */
+}
+
 nav {
   background-image: linear-gradient(to bottom, #38476f, #1a2538);
   color: #1a1a1a;
@@ -32,6 +41,14 @@ nav {
   padding: 10px;
   min-height: 60px;
   text-align: right;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 .grid-container {
@@ -68,7 +85,31 @@ nav {
   margin-bottom: 10px;
 }
 
+#g_id_onload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .character-box:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#character-select-button {
+  border: none;
+  border-radius: 15px;
+  height: 80px;
+  width: 150px;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 90px;
+  font-family: 'Sigmar', cursive;
+  background-color: #698096;
+  color: #dbd7d7;
+  box-shadow: 0px 4px 12px rgba(0, 10, 30, .38);
+}
+#character-select-button:hover {
   background-color: #ccc;
   cursor: pointer;
 }
@@ -112,13 +153,6 @@ main {
   flex-direction: column;
 }
 
-button {
-  font-size: 15px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 #logout-x {
   display: flex;
@@ -152,6 +186,7 @@ button {
   font-family: 'Sigmar', cursive;
   font-size: 15px;
   border: none;
+  border-radius: 5px;
   background-color: rgb(186, 50, 50);
   color: rgb(227, 223, 223);
   width: 25px;
