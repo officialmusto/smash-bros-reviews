@@ -1,33 +1,40 @@
-  <% if (!user) { %>
-    <script defer src="https://accounts.google.com/gsi/client"></script>
-  <% } %>
-</head>
 <body>
   <nav>
-    <a href="/characters/">✍️</a>
-    
-    <a href="/">🏠</a>
-    <% if (user) { %>
-      <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <div 
-        id="g_id_onload"
-        data-client_id="<%= googleClientID %>"
-        data-login_uri="/auth/google"
-        data-auto_prompt="false"
-        data-prompt_parent_id="g_id_onload"
-      ></div>
-      <div 
-        class="g_id_signin right"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="rectangular"
-        data-logo_alignment="left"
-      ></div>
+<% if (user) { %>
+  <a href="/auth/logout" class="right">
+    <button type="submit">Logout</button>
+  </a>
+<% } else { %>
+  <div 
+    id="g_id_onload"
+    data-client_id="<%= googleClientID %>"
+    data-login_uri="/auth/google"
+    data-auto_prompt="false"
+    data-prompt_parent_id="g_id_onload"
+  ></div>
+  <div 
+    class="g_id_signin right"
+    data-type="standard"
+    data-size="large"
+    data-theme="outline"
+    data-text="sign_in_with"
+    data-shape="rectangular"
+    data-logo_alignment="left"
+  ></div>
+<% } %>
+  <% if (!user) { %>
+    <script defer src="https://accounts.google.com/gsi/client"></script>
     <% } %>
+  </head>
+      <div class="nav-icons"  id="nav-home" >
+        <a id="nav-write" href="/characters/">
+          <img id="write-icon" src="https://img.icons8.com/3d-fluency/40/null/hand-with-pen.png"/>
+        </a>
+      </div>
+      <div class="nav-icons" id="nav-home">
+        <a href="/">
+          <img id="home-icon" src="https://img.icons8.com/3d-fluency/40/null/home.png"/>
+        </a>
+      </div>
 
   </nav>

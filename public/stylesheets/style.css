@@ -26,17 +26,26 @@ nav {
   background-image: linear-gradient(to bottom, #38476f, #1a2538);
   color: #1a1a1a;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   min-height: 60px;
   text-align: right;
 }
 
+
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+#home-icon, #write-icon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 a {
@@ -46,6 +55,7 @@ a {
 #profile-picture {
   border-radius: 18px;
 }
+
 
 .right {
   margin-left: auto;
