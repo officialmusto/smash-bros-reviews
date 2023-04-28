@@ -6,9 +6,9 @@ Welcome to Smash Bros Reviews, a website where you can share your thoughts on yo
 ## Live Demo:
 - [Live Demo](https://smash-reviews.fly.dev/)
 
-![Smash Bros. Reviews (main page)](https://user-images.githubusercontent.com/98829614/235037288-fb51d366-4cb2-426d-889f-c2b596428b32.png)
-![Smash Bros. Reviews (select your character)](https://user-images.githubusercontent.com/98829614/235037415-e42d331a-b8e0-4f80-b586-942e5e4b0fd5.png)
-![Smash Bros. Reviews (Add your Review)](https://user-images.githubusercontent.com/98829614/235038043-96484dbf-9e35-4f17-aa29-013020891eb8.png)
+![Smash Bros. Reviews (select your character)](https://user-images.githubusercontent.com/98829614/235156581-a7183e7f-f470-4ffa-82e3-00696fae82a7.png)
+![Smash Bros. Reviews (main page)](https://user-images.githubusercontent.com/98829614/235155229-b16f103a-ee6c-4ac8-a6ca-2d5a0fb39e48.png)
+![Smash Bros. Reviews (Add your Review)](https://user-images.githubusercontent.com/98829614/235156187-c5af2a1c-3127-4464-8050-796405fd6ec3.png)
 
 
 
