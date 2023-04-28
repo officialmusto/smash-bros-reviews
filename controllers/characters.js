@@ -2,9 +2,9 @@ import { Character, Review } from '../models/character.js'
 
 function index(req, res){
   Character.find({})
-  .then(characters => {
+  .then(character => {
     res.render('characters/index', {
-      characters,
+      character,
       title: "Choose your Character."
     })
   })

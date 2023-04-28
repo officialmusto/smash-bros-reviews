@@ -57,6 +57,7 @@ Welcome to Smash Bros Reviews, a website where you can share your thoughts on yo
 - [ChatGPT](https://www.openai.com/)
 - [Font Awesome](https://fontawesome.com/)
 - [icons8](https://icons8.com/)
+- [Avatars](https://nintendo.fandom.com/)
 
 ## Upcoming Features & Next Steps
 

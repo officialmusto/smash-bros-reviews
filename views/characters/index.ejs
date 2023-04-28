@@ -5,9 +5,12 @@
   <h1>Choose Your Character.</h1>
   <a href="/">Landing Page</a><br>
   <br>
-  <% characters.forEach(character => { %>
-    <a href="/characters/<%= character._id %>"><%= character.name %></a>
-  <% }) %>
+  <div class="grid-container">
+    <% character.forEach(character => { %>
+      <a class="character-box" href="/characters/<%= character._id %>"><%= character.name %>
+        <img src="/assets/png/character-avatars/<%= character.name %>.webp" alt=""></a>
+    <% }) %>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
