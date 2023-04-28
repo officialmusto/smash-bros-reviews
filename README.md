@@ -54,7 +54,7 @@ Welcome to Smash Bros Reviews, a website where you can share your thoughts on yo
 - [Stack Overflow](https://stackoverflow.com/)
 - [Mongoose Documentation](https://mongoosejs.com/docs/index.html)
 - [MongoDB](https://www.mongodb.com/)
-- [ChatGPT](https://www.openai.com/chatgpt/)
+- [ChatGPT](https://www.openai.com/)
 - [Font Awesome](https://fontawesome.com/)
 - [Favicon](https://www.favicon.cc/)
 
