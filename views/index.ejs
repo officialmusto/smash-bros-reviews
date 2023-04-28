@@ -2,7 +2,8 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Welcome to the Main Page, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Super Smash bros. Reviews</h1>
+  <h2>Make sure to write a review! <%= user ? user.profile.name : "friend" %></h2>
   <% if (user?.profile.avatar) { %>
     <div>
       <img class="google" id="profile-picture"

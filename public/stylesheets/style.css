@@ -20,6 +20,7 @@ body {
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
+  font-family: 'Jost', sans-serif;
 }
 
 nav {
@@ -33,13 +34,74 @@ nav {
   text-align: right;
 }
 
+#review {
+  font-size: 25px;
+}
 
+#review-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+textarea {
+  border-radius: 15px;
+  padding: 10px;
+}
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+button {
+  font-size: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logout-x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#new-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#delete-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sigmar', cursive;
+  font-size: 15px;
+  border: none;
+  background-color: rgb(186, 50, 50);
+  color: rgb(227, 223, 223);
+  width: 25px;
+  height: 25px;
+  margin-left: 40px;
 }
 
 #home-icon, #write-icon {

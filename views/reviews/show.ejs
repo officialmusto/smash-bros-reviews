@@ -3,18 +3,22 @@
 
 <main>
   <h1> <%= title %>'s Reviews.</h1>
-  <div><% character.reviews.forEach(review => { %>
-    <p> <%= review.content %> </p>
+  <div id="review-content" ><% character.reviews.forEach(review => { %>
+    <p id="review" > <%= review.content %> </p>
     <% if (review.reviewer.equals(user?.profile._id)) { %>
-      <a href="/reviews/<%= character._id %>/<%= review._id %>/edit"><button>edit</button>
+      <a id="edit-icon" href="/reviews/<%= character._id %>/<%= review._id %>/edit">
+        <img src="https://img.icons8.com/3d-fluency/30/null/edit.png"/>
+        <!-- <button>edit</button> -->
       </a>
-      <form action="/reviews/<%= character._id %>/<%= review._id %>?_method=DELETE" method="POST">
-        <button>X</button>
+      <form id="delete-form" action="/reviews/<%= character._id %>/<%= review._id %>?_method=DELETE" method="POST">
+        <button id="delete-button" >X</button>
         </form>
   <% } %>
   <% }) %></div>
   <br>
-  <a href="/reviews/<%= character._id %>/new">Create a New Review</a>
+  <a id="new-icon" href="/reviews/<%= character._id %>/new">
+    <img src="https://img.icons8.com/3d-fluency/50/null/add.png"/>
+  </a>
   <br>
 </main>
 
