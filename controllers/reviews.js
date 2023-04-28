@@ -38,7 +38,7 @@ function create(req, res) {
     character.save()
     res.render(`reviews/show`, {
       character,
-      title: "Character Review"
+      title: character.name
     })
   })
   .catch(err => {
