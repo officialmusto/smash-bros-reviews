@@ -65,7 +65,3 @@ Welcome to Smash Bros Reviews, a website where you can share your thoughts on yo
 - Implement favorites and profile pages
 - Include character and user profile pictures
 - Continue improving the website based on user feedback
-- Implement user replies to reviews
-- Create user profile pages with favorite characters and reviews
-- Add character and user profile pictures
-- Continue refining and expanding features based on user feedback
