@@ -1,11 +1,16 @@
 # Smash Bros Reviews
 
-![Smash Bros Reviews Screenshot or Logo](./screenshot_or_logo.png)
 
 Welcome to Smash Bros Reviews, a website where you can share your thoughts on your favorite characters from the game Super Smash Brothers Ultimate! Review characters, read other players' opinions, and engage with the community.
 
 ## Live Demo:
 - [Live Demo](https://smash-reviews.fly.dev/)
+
+![Smash Bros. Reviews (main page)](https://user-images.githubusercontent.com/98829614/235037288-fb51d366-4cb2-426d-889f-c2b596428b32.png)
+![Smash Bros. Reviews (select your character)](https://user-images.githubusercontent.com/98829614/235037415-e42d331a-b8e0-4f80-b586-942e5e4b0fd5.png)
+![Smash Bros. Reviews (Add your Review)](https://user-images.githubusercontent.com/98829614/235038043-96484dbf-9e35-4f17-aa29-013020891eb8.png)
+
+
 
 ## Table of Contents
 
