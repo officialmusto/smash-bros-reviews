@@ -1,7 +1,13 @@
 <%- include('../partials/html-head') %> <%- include('../partials/nav') %>
 
 <main>
+  <img
+    id="char-picture"
+    src="/assets/png/character-avatars/<%= character.name %>.webp"
+    alt=""
+  />
   <h1><%= title %>'s Reviews.</h1>
+  <% if (character.review) { %>
   <div id="review-content">
     <% character.reviews.forEach(review => { %>
     <div id="review-section">
@@ -24,10 +30,13 @@
     <% } %> <% }) %>
   </div>
   <br />
+  <% } else { %>
+  <h1>Be the first to add a review!</h1>
   <a id="new-icon" href="/reviews/<%= character._id %>/new">
     <img src="https://img.icons8.com/3d-fluency/50/null/add.png" />
   </a>
   <br />
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

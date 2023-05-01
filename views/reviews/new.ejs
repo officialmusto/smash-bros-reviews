@@ -32,7 +32,7 @@
     <br />
     <label
       >Rate <%= character.name %>'s Tier Level
-      <select name="tier" id="tier-level-select">
+      <select id="select-tier" name="tier" id="tier-level-select">
         <option value="S">S</option>
         <option value="A">A</option>
         <option value="B">B</option>
@@ -54,7 +54,7 @@
     </label>
     <br />
     <br />
-    <button>Add Review!</button>
+    <button id="add-review-btn">Add Review!</button>
   </form>
   <% } else { %>
   <h1>Please log in to write a review.</h1>
