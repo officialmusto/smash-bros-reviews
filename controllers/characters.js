@@ -1,4 +1,4 @@
-import { Character, Review } from "../models/character.js"
+import { Character} from "../models/character.js"
 
 function index(req, res) {
   Character.find({})
