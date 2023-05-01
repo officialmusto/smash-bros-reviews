@@ -17,12 +17,11 @@ body {
   min-height: 100%;
   color: #de8fad;
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  font-family: system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
   margin: 0;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
-
 
 a {
   text-decoration: none; /* Remove underline by default */
@@ -104,10 +103,10 @@ h2 {
   font-size: 14px;
   padding: 10px;
   margin-top: 90px;
-  font-family: 'Sigmar', cursive;
+  font-family: "Sigmar", cursive;
   background-color: #698096;
   color: #dbd7d7;
-  box-shadow: 0px 4px 12px rgba(0, 10, 30, .38);
+  box-shadow: 0px 4px 12px rgba(0, 10, 30, 0.38);
 }
 #character-select-button:hover {
   background-color: #ccc;
@@ -122,10 +121,10 @@ h2 {
   font-size: 25px;
   padding: 10px;
   margin-top: 90px;
-  font-family: 'Sigmar', cursive;
+  font-family: "Sigmar", cursive;
   background-color: #698096;
   color: #dbd7d7;
-  box-shadow: 0px 4px 12px rgba(0, 10, 30, .38);
+  box-shadow: 0px 4px 12px rgba(0, 10, 30, 0.38);
 }
 #update-button:hover {
   background-color: #ccc;
@@ -142,7 +141,6 @@ h2 {
   margin-left: 20px;
 }
 
-
 #review-content {
   display: flex;
   align-items: center;
@@ -155,7 +153,6 @@ h2 {
   box-shadow: 0px 4px 12px rgba(0, 10, 0, 0.18);
   color: white;
   font-weight: bold;
-
 }
 
 form {
@@ -167,7 +164,7 @@ form {
 textarea {
   border-radius: 15px;
   padding: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   box-shadow: 0px 4px 12px rgba(0, 25, 0, 0.58);
 }
@@ -178,7 +175,6 @@ main {
   justify-content: center;
   flex-direction: column;
 }
-
 
 #logout-x {
   display: flex;
@@ -209,7 +205,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Sigmar', cursive;
+  font-family: "Sigmar", cursive;
   font-size: 15px;
   border: none;
   border-radius: 5px;
@@ -221,7 +217,8 @@ main {
   margin-right: 20px;
 }
 
-#home-icon, #write-icon {
+#home-icon,
+#write-icon {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -248,10 +245,10 @@ a {
   font-size: 14px;
   padding: 10px;
   margin-top: 90px;
-  font-family: 'Sigmar', cursive;
+  font-family: "Sigmar", cursive;
   background-color: #698096;
   color: #dbd7d7;
-  box-shadow: 0px 4px 12px rgba(0, 10, 30, .38);
+  box-shadow: 0px 4px 12px rgba(0, 10, 30, 0.38);
 }
 
 .right {
