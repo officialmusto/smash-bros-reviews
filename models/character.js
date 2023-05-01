@@ -3,11 +3,6 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const replySchema = new Schema({
-  content: String,
-  reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
-})
-
 const reviewSchema = new Schema({
   avatar: String,
   content: String,
@@ -15,7 +10,6 @@ const reviewSchema = new Schema({
   tier: String,
   favChar: Boolean,
   reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  reply: [replySchema],
   }, {
   timestamps: true,
   })

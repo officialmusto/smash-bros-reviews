@@ -93,8 +93,8 @@ function deleteReview(req, res){
 export {
   index,
   create,
+  update,
   newReview as new,
   editReview as edit,
-  update,
   deleteReview as delete,
 }
