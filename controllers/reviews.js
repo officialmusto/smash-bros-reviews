@@ -1,94 +1,93 @@
-import { Character} from "../models/character.js"
-
+import { Character } from "../models/character.js"
 
 function index(req, res) {
   Character.findById(req.params.characterId)
-    .then(character => {
+    .then((character) => {
       console.log(character.name)
       console.log(character)
-      res.render('reviews/show', {
+      res.render("reviews/show", {
         character: character,
-        title: 'titles',
+        title: "titles",
       })
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err)
-      res.redirect('/')
+      res.redirect("/")
     })
 }
 function newReview(req, res) {
   Character.findById(req.params.characterId)
-    .then(character => {
-      res.render('reviews/new', {
+    .then((character) => {
+      res.render("reviews/new", {
         character,
-        title: 'Write a Review.',
+        title: "Write a Review.",
       })
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err)
-      res.redirect('/')
+      res.redirect("/")
     })
 }
 function create(req, res) {
   req.body.reviewer = req.user.profile._id
   req.body.favChar = !!req.body.favChar
   Character.findById(req.params.characterId)
-  .then(character => {
-    character.reviews.push(req.body)
-    character.save()
-    res.render(`reviews/show`, {
-      character,
-      title: character.name
+    .then((character) => {
+      character.reviews.push(req.body)
+      character.save()
+      res.render(`reviews/show`, {
+        character,
+        title: character.name,
+      })
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
+    .catch((err) => {
+      console.log(err)
+      res.redirect("/")
+    })
 }
 function editReview(req, res) {
   Character.findById(req.params.characterId)
-  .then(character => {
-    console.log(character.reviews)
-    let review = character.reviews.id(req.params.reviewId)
-    console.log(review)
-    res.render('reviews/edit', {
-      character,
-      review,
-      title: "Edit your Review."
+    .then((character) => {
+      console.log(character.reviews)
+      let review = character.reviews.id(req.params.reviewId)
+      console.log(review)
+      res.render("reviews/edit", {
+        character,
+        review,
+        title: "Edit your Review.",
+      })
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
+    .catch((err) => {
+      console.log(err)
+      res.redirect("/")
+    })
 }
-function update(req, res){
+function update(req, res) {
   req.body.favChar = !!req.body.favChar
   Character.findById(req.params.characterId)
-  .then(character => {
-    character.reviews = character.reviews.map(r => (
-      r.equals(req.params.reviewId) ? {...r, ...req.body} : r
-    ))
-    character.save()
-    res.redirect(`/characters/${req.params.characterId}`)
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
+    .then((character) => {
+      character.reviews = character.reviews.map((r) =>
+        r.equals(req.params.reviewId) ? { ...r, ...req.body } : r
+      )
+      character.save()
+      res.redirect(`/characters/${req.params.characterId}`)
+    })
+    .catch((err) => {
+      console.log(err)
+      res.redirect("/")
+    })
 }
-function deleteReview(req, res){
+function deleteReview(req, res) {
   Character.findById(req.params.characterId)
-  .then(character => {
-    character.reviews.id(req.params.reviewId).deleteOne()
-    character.save()
-    res.redirect(`/characters/${req.params.characterId}`)
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
+    .then((character) => {
+      character.reviews.id(req.params.reviewId).deleteOne()
+      character.save()
+      res.redirect(`/characters/${req.params.characterId}`)
+    })
+    .catch((err) => {
+      console.log(err)
+      res.redirect("/")
+    })
 }
 export {
   index,

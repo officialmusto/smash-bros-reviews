@@ -1,26 +1,33 @@
-<%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+<%- include('../partials/html-head') %> <%- include('../partials/nav') %>
 
 <main>
-  <h1> <%= title %>'s Reviews.</h1>
-  <div id="review-content" ><% character.reviews.forEach(review => { %>
-    <div id="review-section" >
-    <p id="review" > <%= review.content %> </p>
+  <h1><%= title %>'s Reviews.</h1>
+  <div id="review-content">
+    <% character.reviews.forEach(review => { %>
+    <div id="review-section">
+      <p id="review"><%= review.content %></p>
     </div>
     <% if (review.reviewer.equals(user?.profile._id)) { %>
-      <a id="edit-icon" href="/reviews/<%= character._id %>/<%= review._id %>/edit">
-        <img src="https://img.icons8.com/3d-fluency/30/null/edit.png"/>
-      </a>
-      <form id="delete-form" action="/reviews/<%= character._id %>/<%= review._id %>?_method=DELETE" method="POST">
-        <button id="delete-button" >X</button>
-        </form>
-  <% } %>
-  <% }) %></div>
-  <br>
+    <a
+      id="edit-icon"
+      href="/reviews/<%= character._id %>/<%= review._id %>/edit"
+    >
+      <img src="https://img.icons8.com/3d-fluency/30/null/edit.png" />
+    </a>
+    <form
+      id="delete-form"
+      action="/reviews/<%= character._id %>/<%= review._id %>?_method=DELETE"
+      method="POST"
+    >
+      <button id="delete-button">X</button>
+    </form>
+    <% } %> <% }) %>
+  </div>
+  <br />
   <a id="new-icon" href="/reviews/<%= character._id %>/new">
-    <img src="https://img.icons8.com/3d-fluency/50/null/add.png"/>
+    <img src="https://img.icons8.com/3d-fluency/50/null/add.png" />
   </a>
-  <br>
+  <br />
 </main>
 
 <%- include('../partials/footer') %>
