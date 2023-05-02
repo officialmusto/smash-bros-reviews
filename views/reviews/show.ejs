@@ -5,7 +5,7 @@
       <h1>
         <%= title %>'s Reviews.
       </h1>
-      <% if (character.review) { %>
+      <% if (character.reviews) { %>
         <div id="review-content">
           <% character.reviews.forEach(review=> { %>
             <div id="review-section">
@@ -14,23 +14,25 @@
               </p>
             </div>
             <% if (review.reviewer.equals(user?.profile._id)) { %>
-              <a id="edit-icon" href="/reviews/<%= character._id %>/<%= review._id %>/edit">
+              <a id="edit-icon" href="/characters/<%= character._id %>/reviews/<%= review._id %>/edit">
                 <img src="https://img.icons8.com/3d-fluency/30/null/edit.png" />
               </a>
-              <form id="delete-form" action="/reviews/<%= character._id %>/<%= review._id %>?_method=DELETE"
+              <form id="delete-form" action="/characters/<%= character._id %>/reviews/<%= review._id %>?_method=DELETE"
                 method="POST">
                 <button id="delete-button">X</button>
               </form>
               <% } %>
                 <% }) %>
         </div>
+        <a id="new-icon" href="/characters/<%= character._id %>/reviews/new">
+          <img src="https://img.icons8.com/3d-fluency/50/null/add.png" />
+        </a>
         <br />
         <% } else { %>
           <h1>Be the first to add a review!</h1>
-          <a id="new-icon" href="/reviews/<%= character._id %>/new">
+          <a id="new-icon" href="/characters/<%= character._id %>/reviews/new">
             <img src="https://img.icons8.com/3d-fluency/50/null/add.png" />
           </a>
-          <br />
           <% } %>
     </main>
 
