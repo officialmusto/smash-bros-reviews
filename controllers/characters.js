@@ -30,8 +30,6 @@ function show(req, res) {
 function showReview(req, res) {
   Character.findById(req.params.characterId)
     .then((character) => {
-      console.log(character.name)
-      console.log(character)
       res.render("reviews/show", {
         character: character,
         title: "titles",
@@ -58,7 +56,6 @@ function newReview(req, res) {
 function createReview(req, res) {
   req.body.reviewer = req.user.profile._id
   req.body.favChar = !!req.body.favChar
-  console.log(req.body)
   Character.findById(req.params.characterId)
     .then((character) => {
       character.reviews.push(req.body)
@@ -76,9 +73,7 @@ function createReview(req, res) {
 function editReview(req, res) {
   Character.findById(req.params.characterId)
     .then((character) => {
-      console.log(character.reviews)
       let review = character.reviews.id(req.params.reviewId)
-      console.log(review)
       res.render("reviews/edit", {
         character,
         review,
