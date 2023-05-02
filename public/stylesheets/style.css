@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  min-height: 100%;
 }
 
 /* The Universal Selector */
@@ -12,7 +13,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to bottom, #4b5c8b, #2b3c5b);
+  background-image: linear-gradient(to bottom, #4b5c8b, #23304a);
   min-height: 100%;
   color: #de8fad;
   /* Use a system font, if none are available use any found sans-sarif font */
@@ -20,6 +21,13 @@ body {
     "Helvetica Neue", sans-serif;
   margin: 0;
   font-family: "Jost", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 a {
@@ -34,11 +42,12 @@ nav {
   background-image: linear-gradient(to bottom, #38476f, #1a2538);
   color: #1a1a1a;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 10px;
   min-height: 60px;
   text-align: right;
+  border-radius: 20px;
+  margin: 20px;
 }
 
 h1 {
@@ -199,17 +208,13 @@ textarea {
   box-shadow: 0px 4px 12px rgba(0, 25, 0, 0.58);
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+
 
 #logout-x {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 200px;
 }
 
 #edit-icon {
@@ -249,6 +254,7 @@ main {
   display: flex;
   justify-content: center;
   align-self: center;
+  margin-right: 200px;
 }
 
 a {
