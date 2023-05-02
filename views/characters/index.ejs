@@ -2,14 +2,16 @@
 
     <main>
       <h1>Choose Your Character.</h1>
-      <div class="grid-container">
-        <% character.forEach(character=> { %>
-          <a class="character-box" href="/characters/<%= character._id %>">
-            <%= character.name %>
-              <img id="char-picture" src="/assets/png/character-avatars/<%= character.name %>.webp"
-                alt="char-picture" />
-          </a>
-          <% }) %>
+      <div id="grid-parent">
+        <div class="grid-container">
+          <% character.forEach(character=> { %>
+            <a class="character-box" href="/characters/<%= character._id %>">
+              <%= character.name %>
+                <img id="char-picture" src="/assets/png/character-avatars/<%= character.name %>.webp"
+                  alt="char-picture" />
+            </a>
+            <% }) %>
+        </div>
       </div>
     </main>
 

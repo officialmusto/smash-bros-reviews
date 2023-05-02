@@ -58,6 +58,13 @@ h2 {
   font-size: 30px;
 }
 
+.grid-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: column;
+}
+
 .grid-container {
   display: flex;
   justify-content: center;

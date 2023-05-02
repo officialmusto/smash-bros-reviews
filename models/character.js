@@ -4,7 +4,6 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema(
   {
-    avatar: String,
     content: String,
     startYear: Number,
     tier: String,
