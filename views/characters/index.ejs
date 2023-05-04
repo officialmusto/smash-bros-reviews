@@ -5,12 +5,14 @@
       <div id="grid-parent">
         <div class="grid-container">
           <% character.forEach(character=> { %>
-            <a class="character-box" href="/characters/<%= character._id %>">
-              <%= character.name %>
-                <img id="char-picture" src="/assets/png/character-avatars/<%= character.name %>.webp"
-                  alt="char-picture" />
-            </a>
-            <% }) %>
+            <div id="character-boxes">
+              <a class="character-box" href="/characters/<%= character._id %>">
+                <h4 id="character-name"><%= character.name %></h4>
+                  <img id="char-picture" src="/assets/png/character-avatars/<%= character.name %>.webp"
+                    alt="char-picture" />
+              </a>
+            </div>
+          <% }) %>
         </div>
       </div>
     </main>

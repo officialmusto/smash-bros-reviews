@@ -11,19 +11,18 @@
             <div id="review-section">
               <p id="review">
                 <%= review.content %>
-
-            <% if (review.reviewer.equals(user?.profile._id)) { %>
-              <a id="edit-icon" href="/characters/<%= character._id %>/reviews/<%= review._id %>/edit">
-                <img src="https://img.icons8.com/3d-fluency/30/null/edit.png" />
-              </a>
-              <form id="delete-form" action="/characters/<%= character._id %>/reviews/<%= review._id %>?_method=DELETE"
-                method="POST">
-                <button id="delete-button">X</button>
-              </form>
-              <% } %>
-            </p>
-          </div>
-                <% }) %>
+                  <% if (review.reviewer.equals(user?.profile._id)) { %>
+                    <a id="edit-icon" href="/characters/<%= character._id %>/reviews/<%= review._id %>/edit">
+                      <img src="https://img.icons8.com/3d-fluency/30/null/edit.png" />
+                    </a>
+                    <form id="delete-form"
+                      action="/characters/<%= character._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                      <button id="delete-button">X</button>
+                    </form>
+                    <% } %>
+              </p>
+            </div>
+            <% }) %>
         </div>
         <a id="new-icon" href="/characters/<%= character._id %>/reviews/new">
           <img src="https://img.icons8.com/3d-fluency/50/null/add.png" />

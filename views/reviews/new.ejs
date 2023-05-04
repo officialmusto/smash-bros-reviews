@@ -1,5 +1,4 @@
-<%- include('../partials/html-head') %>
-  <%- include('../partials/nav') %>
+<%- include('../partials/html-head') %> <%- include('../partials/nav') %>
 
     <main>
       <% if (user) { %>
@@ -13,29 +12,7 @@
           <label>
             <textarea name="content" id="title-input" rows="6" cols="50"
               placeholder="Write your review here..."></textarea>
-          </label>
-          <br />
-          <br />
-          <label>Smash Player Since:
-            <input type="number" name="startYear" id="start-year-input" min="1999" placeholder="enter start year" />
-          </label>
-          <br />
-          <br />
-          <label>Rate <%= character.name %>'s Tier Level
-              <select id="select-tier" name="tier" id="tier-level-select">
-                <option value="S">S</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="F">F</option>
-              </select>
-          </label>
-          <br />
-          <br />
-          <label>Is <%= character.name %> a Personal Favorite?
-              <input type="checkbox" name="favChar" id="in-favorites-checkbox" unchecked />
-          </label>
+          </label>  
           <br />
           <br />
           <button id="add-review-btn">Add Review!</button>

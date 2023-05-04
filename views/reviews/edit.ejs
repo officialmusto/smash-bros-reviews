@@ -17,31 +17,6 @@
           </label>
           <br />
           <br />
-          <label>Smash Player Since:
-            <input type="number" name="startYear" id="start-year-input" min="1999" value="<%= review.startYear %>" />
-          </label>
-          <br />
-          <br />
-          <label>Character Tier Level
-            <select name="tier" id="tier-level-select">
-              <option value="<%= review.tier %>">
-                <%= review.tier %>
-              </option>
-              <option value="S">S</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-              <option value="F">F</option>
-            </select>
-          </label>
-          <br />
-          <br />
-          <label>Add to Favorites? <input type="checkbox" name="favChar" id="in-favorites-checkbox" <%=review.favChar
-              ? "checked" : "" %>/>
-          </label>
-          <br />
-          <br />
           <button id="update-button">Update</button>
         </form>
         <% } else { %>

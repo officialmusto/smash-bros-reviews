@@ -70,7 +70,7 @@ h2 {
   justify-content: center;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-gap: 20px;
   padding: 20px;
   flex-direction: row;
@@ -86,11 +86,22 @@ h2 {
   border-radius: 14px;
   height: 150px;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 1.1rem;
+
   box-shadow: 0px 4px 12px rgba(0, 10, 0, 0.18);
 }
+
+#character-name {
+  display: flex;
+  flex-wrap: wrap;
+  color: #333;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 13px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 4px 12px rgba(0, 10, 0, 0.18);
+  padding: 10px;
+}
+
 
 .character-box img {
   max-width: 100%;
